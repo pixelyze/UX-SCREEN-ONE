@@ -21,6 +21,7 @@ $indicator-down-color: #b71c1c;
 	background: #fff;
 	@include border-radius(15px);
 	@include clearfix;
+	margin-bottom:15px;
 	
 	h2 {
 		text-transform: uppercase;
