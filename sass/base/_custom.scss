@@ -1,62 +1,86 @@
 //
+// Vars
+// --------------------------------------------------
+
+// Indicators colors
+$indicator-top-color: #00e676;
+$indicator-up-color: #23b7e5;
+$indicator-steady-color: #fbc02d;
+$indicator-down-color: #b71c1c;
+
+//
 // Panels
 // --------------------------------------------------
 
 .panels {
-	//border:1px solid red;
-	padding:20em 0	;
-
-	.indicator-text {
-		color: #999;
-		font-weight: 700;
-		font-size: 17px;
-	}
+	padding:160px 0	;
 }
+
 .panel {
-	padding:20px 0;
+	padding-bottom:15px;
 	background: #fff;
 	@include border-radius(15px);
 	@include clearfix;
+	
+	h2 {
+		text-transform: uppercase;
+		margin: 0px;
+		color: #00e676;
+	}
 
-	.id-info {
+	.panel-icon, .panel-title {display: inline-block;}
+
+	.panel-icon {
 		@include border-radius(15px);
-		display: block;
 		width: 60px;
 		height: 60px;
-		font-size: 30px;
 		line-height: 60px;
+		font-size: 30px;
 		color: #fff;
 		background-color: #00e676;
+
+			> span {
+			margin-left: -3px;
+
+			em {
+			text-transform: uppercase;
+			font-style: normal;
+			}
+		}
+	}
+
+	.panel-header {
+		padding:15px;
+		//padding-bottom:15px;
+	}
+	.indicator-text {
+		color: #999;
+		display: block;
+		text-align: center;
+		@include clearfix;
+		font-weight: 700;
+		font-size: 17px;
+		line-height: 15px;
+		
+		strong {font-size:25px;}
+
+		&.top, &.top strong {
+			color:$indicator-top-color;
+			> i {@include rotate(-90deg);}
+		}
+		&.up, &.up strong {
+			color:$indicator-up-color;
+			> i {@include rotate(-45deg);}
+		}
+		
+		&.steady, &.steady strong {
+			color:$indicator-steady-color;
+		}
+		&.down, &.down strong {
+			color:$indicator-down-color;
+			> i {@include rotate(45deg);}
+		}
 	}
 }
 
 
-
-
-
-
-
-
-
-.item {
-	//box-sizing: border-box;
-	padding:2em 0;
-	//background: #ccc;
-	//float:left;
-	//border:1px solid red;
-
-  @media (max-width: $screen-xs-max) {
-    //display: block !important;
-    //float: none;
-  }
-}
-
-
-//h1 i, canvas {
-//	@include rotate(10deg);
-//}
-
-
-.toto i {
-	@include rotate(-45deg);
-}

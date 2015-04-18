@@ -13,7 +13,7 @@ sass_dir = "sass"
 images_dir = "assets/img"
 javascripts_dir = "assets/js"
 
-output_style = :nested
+output_style = :expanded
 environment = :development
 line_comments = false
 relative_assets =  true
