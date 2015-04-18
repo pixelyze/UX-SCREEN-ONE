@@ -1,0 +1,62 @@
+//
+// Panels
+// --------------------------------------------------
+
+.panels {
+	//border:1px solid red;
+	padding:20em 0	;
+
+	.indicator-text {
+		color: #999;
+		font-weight: 700;
+		font-size: 17px;
+	}
+}
+.panel {
+	padding:20px 0;
+	background: #fff;
+	@include border-radius(15px);
+	@include clearfix;
+
+	.id-info {
+		@include border-radius(15px);
+		display: block;
+		width: 60px;
+		height: 60px;
+		font-size: 30px;
+		line-height: 60px;
+		color: #fff;
+		background-color: #00e676;
+	}
+}
+
+
+
+
+
+
+
+
+
+.item {
+	//box-sizing: border-box;
+	padding:2em 0;
+	//background: #ccc;
+	//float:left;
+	//border:1px solid red;
+
+  @media (max-width: $screen-xs-max) {
+    //display: block !important;
+    //float: none;
+  }
+}
+
+
+//h1 i, canvas {
+//	@include rotate(10deg);
+//}
+
+
+.toto i {
+	@include rotate(-45deg);
+}
