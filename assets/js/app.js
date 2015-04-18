@@ -43,5 +43,3 @@
   });
 
 })(window, document, window.jQuery);
-
-
