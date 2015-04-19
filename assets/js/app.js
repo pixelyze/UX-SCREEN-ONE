@@ -43,3 +43,25 @@
   });
 
 })(window, document, window.jQuery);
+
+
+$(function() {
+  var wrapper = $(".wrapper"),
+      toggle = $(".navtoggle"),
+      nav = $(".side-nav");
+  toggle.on("click", function() {
+    wrapper.toggleClass("nav-open");
+    // Change le bouton au clic
+    toggle.toggleClass("on");
+    return false;
+  });
+  
+  $(window).on("click", function(e) { 
+    if (wrapper.hasClass("nav-open") && 
+        !$(e.target).hasClass("navtoggle")) {
+      wrapper.removeClass("nav-open");
+     toggle.toggleClass("on");
+     return false;
+    }
+  });
+});
