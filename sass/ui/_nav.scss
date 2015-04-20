@@ -42,7 +42,7 @@
 // Navigation - Menu Slide Out
 // --------------------------------------------------
 
-// Class wrapper à mettre sur le body
+// class .wrapper à mettre sur le contenu pousser par le menu
 .wrapper {
   overflow-x: hidden;
   position: relative;
@@ -54,13 +54,14 @@
   border-right: 1px solid #34495e;
   color: #fff;
   position: fixed;
-  overflow: scroll;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   top: 0;
   left: -250px;
   width: 250px;
   height: 100%;
   padding: 20px 0;
-
+	
   .logo-menu {
   	padding: 10px 20px 20px;
   	text-align: center;
@@ -70,8 +71,55 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
 
-
+  .link {
+      font-size: 20px;
+      background: none;
+      cursor: pointer;
+      padding: 30px 20px;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid #333;
+      @include transition (all 0.3s);
+      &:after {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          @include transition (all 0.3s);
+      }
+  }
+  .link-1 {
+      color: rgba(255, 255, 255, 1);
+      &:after {
+          width: 0%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.1);
+      }
+  }
+  .link-1a {
+      &:after {
+          width: 0%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.1);
+      }
+      &:hover,
+      &:active {
+          color: #fff;
+          text-decoration: none;
+      }
+      &:hover:after,
+      &:active:after {
+          width: 100%;
+      }
   }
 }
 
@@ -89,58 +137,3 @@
   @include transition(left .2s ease)
 }
 
-//
-// Animation des liens de navigation
-// --------------------------------------------------
-
-/* General button style (reset) */
-.btn {
-	border: none;
-	font-family: inherit;
-	font-size: 20px;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 30px 20px;
-	display: block;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	z-index: 1;
-	@include transition (all 0.3s);
-}
-
-.btn:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	@include transition (all 0.3s);
-}
-
-/* Button 1 */
-.btn-1 {
-	//border: 3px solid #fff;
-	color: rgba(255, 255, 255, 1);
-}
-
-/* Button 1c */
-.btn-1c:after {
-	width: 0%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(255, 255, 255, 0.1);
-}
-
-.btn-1c:hover,
-.btn-1c:active {
-	color: #fff;
-	text-decoration: none;
-}
-
-.btn-1c:hover:after,
-.btn-1c:active:after {
-	width: 100%;
-}

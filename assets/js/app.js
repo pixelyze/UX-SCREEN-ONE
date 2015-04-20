@@ -45,6 +45,9 @@
 })(window, document, window.jQuery);
 
 
+// SLIDE NAV
+// ----------------------------------- 
+
 $(function() {
   var wrapper = $(".wrapper"),
       toggle = $(".navtoggle"),
@@ -64,4 +67,9 @@ $(function() {
      return false;
     }
   });
+});
+
+
+$('.example1').supercal({
+  transition: 'carousel-vertical'
 });
