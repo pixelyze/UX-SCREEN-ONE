@@ -15,8 +15,8 @@
 	}
 }(function($) {
 	var defaults = {
-		todayButton: true,		// Show the button to reset to today's date?
-		showInput: true,		// Show input
+		todayButton: false,		// Show the button to reset to today's date?
+		showInput: false,		// Show input
 		weekStart: 1,			// Start day of the week. 0 is Sunday, 6 for Saturday, 1 for Monday (default)
 		widget: true,
 		cellRatio: 1,
@@ -141,6 +141,8 @@
 			drawHeader: function(date, options) {
 				var header = $('<div />').addClass('supercal-header');
 				var monthNames = options.shortMonths ? shortMonths : months;
+				var dayNames = options.shortDays ? shortDays : days; // + Jour de la semaine en cours
+				var numberNames = options.shortDays ? shortDays : days; // test
 
 				$('<button />')
 					.addClass('prev-month change-month btn')
@@ -151,10 +153,13 @@
 					.addClass('next-month change-month btn')
 					.html('&raquo;')
 					.appendTo(header);
-
+				// Affichage de la date
 				$('<span />')
 					.addClass('month')
-					.append('<div>' + monthNames[date.getMonth()] + ' ' + date.getFullYear() + '</div>')
+					//.append('<h2>' + daysNames[date.getDay()] + '</h2>') .text(shortDays[day])
+					.append('<h2>' + dayNames[date.getMonth()] + '</h2>')
+					.append('<h2>' + monthNames[date.getMonth()] + '</h2>')
+					.append('<h2>' + date.getFullYear() + '</h2>')
 					.appendTo(header);
 
 				return header;

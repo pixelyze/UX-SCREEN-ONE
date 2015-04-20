@@ -7841,15 +7841,24 @@ select[multiple].input-lg {
 .panel:after {
   clear: both;
 }
-.panel h2 {
-  text-transform: uppercase;
+.panel .panel-header {
+  padding: 15px 15px 0;
+}
+.panel .panel-header .panel-title {
+  padding-left: 75px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #efefef;
+}
+.panel .panel-header .panel-title h2 {
   margin: 0px;
   color: #00e676;
+  text-transform: uppercase;
 }
-.panel .panel-icon, .panel .panel-title {
-  display: inline-block;
+.panel .panel-header .panel-title span {
+  color: #999;
 }
-.panel .panel-icon {
+.panel .panel-header .icon {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
@@ -7859,16 +7868,15 @@ select[multiple].input-lg {
   font-size: 30px;
   color: #fff;
   background-color: #00e676;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: block;
+  text-align: center;
 }
-.panel .panel-icon > span {
-  margin-left: -3px;
-}
-.panel .panel-icon > span em {
+.panel .panel-header .icon em {
   text-transform: uppercase;
   font-style: normal;
-}
-.panel .panel-header {
-  padding: 15px;
 }
 .panel .indicator-text {
   color: #999;
@@ -7917,72 +7925,4 @@ select[multiple].input-lg {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-.supercal {
-  width: 300px;
-}
-
-.supercal .supercal-header {
-  display: block;
-  line-height: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-  background-color: #d32f2f;
-}
-
-.supercal .supercal-header .prev-month {
-  float: left;
-}
-
-.supercal .supercal-header .next-month {
-  float: right;
-}
-
-.supercal-month {
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.supercal table {
-  width: 300px;
-  table-layout: fixed;
-  background: #fff;
-}
-
-.supercal td {
-  cursor: pointer;
-}
-
-.supercal td:hover {
-  background: #2f96b4 !important;
-  color: #fff;
-}
-
-.supercal td.month-prev, .supercal td.month-next {
-  background: #eee;
-}
-
-.supercal td.selected {
-  background: #0088cc;
-  color: #fff;
-  font-weight: normal;
-}
-
-.supercal td.today {
-  font-weight: bold;
-}
-
-/* Footer */
-.supercal .supercal-footer {
-  width: 100%;
-  display: table;
-}
-
-.supercal .supercal-footer span.supercal-input {
-  display: table-cell;
-  width: 100%;
-  cursor: default;
 }

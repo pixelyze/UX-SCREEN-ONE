@@ -133,7 +133,6 @@
 }
 
 .wrapper, .side-nav {
-  //transition: left .2s ease;
   @include transition(left .2s ease)
 }
 
