@@ -7745,8 +7745,8 @@ select[multiple].input-lg {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   top: 0;
-  left: -250px;
-  width: 250px;
+  left: -260px;
+  width: 260px;
   height: 100%;
   padding: 20px 0;
 }
@@ -7809,7 +7809,7 @@ select[multiple].input-lg {
 }
 
 .nav-open {
-  left: 250px;
+  left: 260px;
   position: fixed;
 }
 .nav-open .side-nav {
